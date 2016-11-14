@@ -58,7 +58,7 @@
 
 \begin{document}
 
-\title{Assassinating ASASSN: Supernovae Identification Using ATLAS Data}
+\title{Assassinating ASASSN:\\ Supernovae Identification Using ATLAS Data}
 
 \author{Corey Mutnik}
 \email{cmutnik@hawaii.edu}
@@ -72,13 +72,16 @@ University of Hawaii at Manoa,\\
 % \section is used to start a new one with a heading
 \begin{abstract}
 Using current data collection and reduction techniques, we plan to 
-identify SN faster and fainter than the All-Sky Automated Survey for Supernovae (ASASSN) team is able to. 
+identify supernovae (SNe) faster and fainter than the All-Sky Automated 
+Survey for Supernovae (ASASSN) team is able to. 
 %With a declination limit of $-30^{\circ}$
-We expect to identify all supernovae (SNe), with $m>17.5$ and declinations above $-30\deg$, 
+We expect to identify all SNe, with $m>17.5$ and declinations above $-30\deg$, 
 before ASASSN is able to.\\
+%For SNe with $m>17.5$ and declination (dec) $>-30\deg$
 %We expect to identify all supernovae (SN) above a declination of $-30\deg$, with $m>17.5$, before ASASSN is able to.\\
+{\bf m$>$17.5 --OR-- $m>17.5$}\\
 {\bf 17.5 (0.5mag) --OR-- 18 (1mag) fainter...which is it?}\\
-{\bf not emphasis on Type Ia supernovae}
+{\bf not emphasis on Type Ia supernovae?}
 \end{abstract}
 
 
@@ -87,20 +90,28 @@ before ASASSN is able to.\\
 
 
 \section{Introduction}
-Supernovae (SN) identification using data collected by ATLAS.
+{\bf Supernova (SN)}\\
+{\bf check plurality throughout paper: SN or SNe}\\
+Supernovae (SNe) identification using data collected by ATLAS.\\
 
-{\bf fix biblio style / numbering}
-{\bf Look at previous JT paper to see if:\\
-numbers inside mathmode: -30$^{\circ}$, $-30^{\circ}$\\
-abbreviations in abstract: ... (ASASSN), or is just ASASSN good\\
-}
+%%%
+% Input general notes and things that need to be fixed / addressed
+%%%
+\input general_notes.tex
 
-{\bf check plurality throughout paper, SN or SNe}
 
-%\section{Data}
+
+
+\iffalse
+ \section{Observations}
+ \section{Data Processing}
+\fi
+
+
+\section{Collected Data}
 
 %\section{ASASSN Breakdown}
-\section{ASASSN Data}
+\subsection{ASASSN Data}
 \begin{itemize}
 	\item{} Where'd it come from
 	\item{} ASASSN specs
@@ -125,11 +136,6 @@ Cerro Tololo station. {\bf Cite using footnote.}
 %they eventually plan to survey the entire sky, every night, down to 17th mag, using 16 scopes at 4 diff sites\\
 %\footnote{http://www.astronomy.ohio-state.edu/~assassin/index.shtml}
 
-{\bf Fix citations: ASASSN data~\cite{asn_data} or use diff cite method\\
-\citet{asn_data}\\
-\citealt{asn_data}\\
-...Should be ``Shappee et al. (2014)''
-}
 
 % OLD plots as single
  %\begin{figure}[H]%[h!]
@@ -145,8 +151,6 @@ Cerro Tololo station. {\bf Cite using footnote.}
  %  \end{center}
  %\end{figure}
  %~[MAKE THIS A DUAL FIGURE: (a) (b)]
-~\\~{\bf [REBIN MJD DATA FOR PEAK BRIGHTNESS DATE NOT DISCOVERY DATE]}\\
-{\bf Need to reference Figure~\ref{fig:asnhist} --OR-- Figures~\ref{fig:mjdhist}~and~\ref{fig:dechist}}
 
 \begin{figure*}
 	\centering
@@ -167,7 +171,8 @@ Cerro Tololo station. {\bf Cite using footnote.}
 \end{figure*}
 
 
-\section{ATLAS PathFinder 2 Observations}
+\subsection{ATLAS}
+ATLAS PathFinder 2 Observations
 \begin{itemize}
 	\item{} ATLAS specs
 	\item{} how data was collected
@@ -190,27 +195,38 @@ Cerro Tololo station. {\bf Cite using footnote.}
 %%%
 \input section_expected_obs.tex
 
+%%%
+% Input variations in plot
+%%%
+\newpage
+\input figures/variations/variations.tex
+\newpage
 
 
 
-\section{SN Identification}
+
+
+
+
+%\section{Results and Discussion}
+\section{Results}
+{\bf Possibly merge these two sections into single: ``Results and Discussion''}\\
+{\bf Summary of data matched between ASASSN and ATLAS.\\
+reference sections that explain particular cases that matching failed}
+
+%\subsection{Independent SN Identification}
+\subsection{SN Identification}
 How ASASSN SN help identify those in ATLAS data.
 
 
 
-
-\section{Results and Discussion}
+%\section{Results and Discussion}
+\section{Discussion}
 \begin{enumerate}
-	\item{} what restrictions we intend to place on things like starrat
-	\item{} 
+	\item{} what restrictions we intend to place on classification variables like starrat
+	\item{} possibly describe what starrat is, how it will help id SN
+	\item{} such restrictions cut the number of objects down from xx to $\sim$1000/2000
 \end{enumerate}
-
-\newpage\newpage
-%\clearpage
-
-
-
-
 
 
 
