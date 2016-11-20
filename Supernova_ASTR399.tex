@@ -5,13 +5,14 @@
 %\documentclass[prd,preprint,letterpaper]{revtex4}
 \documentclass[aps,prb,twocolumn,superscriptaddress]{revtex4-1}
 
-\usepackage{graphicx}  % this is the up-to-date package for all figures
-\usepackage{amssymb}   % for math
-\usepackage{verbatim}  % for the comment environment
+\usepackage{graphicx}	% this is the up-to-date package for all figures
+\usepackage{amssymb}	% for math
+\usepackage{verbatim}	% for the comment environment
 \usepackage{color}
-\usepackage{subcaption} % for sub-captions on side-by-side figures
-\usepackage{float}	% allows use of 'H' command
-\usepackage{tikz} % lets you draw: graphics, flowcharts, pie graphs, etc
+\usepackage{subcaption}	% for sub-captions on side-by-side figures
+\usepackage{float}		% allows use of 'H' command
+\usepackage{tikz}		% lets you draw: graphics, flowcharts, pie graphs, etc
+%\usepackage[final]{pdfpages}	% allows extern pdf to be included
 
 %%%
 % For fancy section references
@@ -94,11 +95,14 @@ before ASASSN is able to.\\
 {\bf check plurality throughout paper: SN or SNe}\\
 Supernovae (SNe) identification using data collected by ATLAS.\\
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
 % Input general notes and things that need to be fixed / addressed
 %%%
 \input general_notes.tex
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -195,13 +199,16 @@ ATLAS PathFinder 2 Observations
 %%%
 \input section_expected_obs.tex
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
 % Input variations in plot
 %%%
 \newpage
 \input figures/variations/variations.tex
 \newpage
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -229,10 +236,22 @@ How ASASSN SN help identify those in ATLAS data.
 \end{enumerate}
 
 
-
-
 \section*{Acknowledgments}
 I would like to thank \input acknowledgement.tex  % input acknowledgement
+
+
+
+\iffalse
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %\clearpage
+ \newpage
+ \section{REMOVE THESE NOTES WHEN FINISHED}
+ %\input JT_meeting_161115_notes.tex 
+ \includepdf[pages=-]{JT_meeting_161115_notes.pdf}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fi
 
 
 
