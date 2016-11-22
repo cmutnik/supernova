@@ -197,21 +197,101 @@ ATLAS PathFinder 2 Observations
 	\item{} how *.ddt is made
 	\item{} what is starrat
 	\item{} \cite{ATLAS_data}
+	%\item{} reduced data became good around 57364
 \end{itemize}
 
+ATLAS began collecting data in June 2015. Reduction methods 
+are always being refined and improved. Data reduced before 
+December 2015 is not trusted, when ATLAS became truly operational.\\
+%Although ATLAS came on-line in June 2015, data reduced before December 2015 is not trusted. 
+{\bf REWORD}
 
 
 \section{Procedure}
-\begin{enumerate}
-	\item{} find asn SN in atlas data
-	\item{} use asn SN to restrict ATLAS classification variables
-	\item{} manually inspect results for SN classification
-\end{enumerate}
+%\begin{enumerate}
+	%\item{} find asn SN in atlas data
+	%\item{} use asn SN to restrict ATLAS classification variables
+	%\item{} manually inspect results for SN classification
+%\end{enumerate}
 {\bf want to make input sections subsections under this section?}
+{\bf quantify: how many objects are potentially SNe before class.var. restriction, how many after\\
+$0.9 < starrat < 1.2$\\}
+%{\bf [check date]\\}
+{\bf possibly include starrat figure\\
+use DS9 image?\\
+~~~remake it\\
+~~~identify exact dates shown by tiles}
+
+\indent In order to assassinate ASASSN, 
+%\indent Before assassinating ASASSN became a possibility,
+it was necessary to show that ATLAS had the potential to find all of ASASSN discovered SNe. 
+%%To refine our SNe search, a trial set was needed. SNe ASASSN team has been 
+To do this, a list of all ASASSN discovered SNe was obtained~\cite{asn_data}. 
+{\bf [--OR-- cite website using footnote]}
+By October 11, 2016 
+ASASSN has reported discovering 385 SNe. Many of these 
+objects were reported before ATLAS was operation. Object cuts are discussed 
+in~\cref{sec:expobs}. Once the data was properly culled, the remaining SNe 
+%served as a {\bf sanity test / validity check}. {}
+were found in observations made by ATLAS. 
+One such SN is shown in Figure~\ref{fig:ds9_ASASSN-16ke}.
+Finding these SNe in the ATLAS 
+data allowed restrictions to be placed on classification variables, drastically 
+reducing the number of potential SNe candidates. With such a restricted object 
+list, visually examination is able to be used in identifying SNe.\\ 
+%These identified SNe allowed for the restriction of ATLAS classification variables.
+
+
+\begin{figure}[H]%[h!]
+   \begin{center}
+ \centerline{\includegraphics[width=3.35in]{figures/ds9_asn16ke.png}}
+ \caption{\it \small{Each tile shows a different ATLAS observation of the SN ``ASASSN-16ke''. The SN is enclosed by a green circle, to show its exact location. \label{fig:ds9_ASASSN-16ke}}}
+   \end{center}
+\end{figure}
+{\bf comment on lower panel showing ATLAS obs before SN appeared in fig~\ref{fig:ds9_ASASSN-16ke}?}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
 % input 2 sections: ``Expected Observations'' and ``Failed Matches''
 %%%
 \input section_expected_obs.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Results and Discussion}
+\indent It has been shown that all ASASSN discovered SNe overlapping ATLAS 
+observations in sky and time are detectable in ATLAS data. Restricting 
+classification variables drastically reduces the false alarm rate, requiring 
+visually inspection of fewer objects. This shows the ability for ATLAS to 
+identify all SNe faster and fainter than ASASSN is able to.
+
+
+{\bf As seen in Figure~\ref{fig:dec_mjd}, SNe that were not 
+observed ATLAS fall on the edges of observation limits.\\}
+%\section{Results}
+%{\bf Possibly merge these two sections into single: ``Results and Discussion''}\\
+{\bf Summary of data matched between ASASSN and ATLAS.\\
+reference sections that explain particular cases that matching failed}
+%\subsection{Independent SN Identification}
+%\subsection{SN Identification}
+{\bf How ASASSN SN help identify those in ATLAS data.}
+%\section{Discussion}
+\begin{enumerate}
+	\item{} what restrictions we intend to place on classification variables like starrat
+	\item{} possibly describe what starrat is, how it will help id SN
+	\item{} such restrictions cut the number of objects down from xx to $\sim$1000/2000
+\end{enumerate}
+
+
+\section*{Acknowledgments}
+I would like to thank \input acknowledgement.tex  % input acknowledgement
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -227,44 +307,16 @@ ATLAS PathFinder 2 Observations
 
 
 
-
-
-%\section{Results and Discussion}
-\section{Results}
-{\bf Possibly merge these two sections into single: ``Results and Discussion''}\\
-{\bf Summary of data matched between ASASSN and ATLAS.\\
-reference sections that explain particular cases that matching failed}
-
-%\subsection{Independent SN Identification}
-\subsection{SN Identification}
-How ASASSN SN help identify those in ATLAS data.
-
-
-
-%\section{Results and Discussion}
-\section{Discussion}
-\begin{enumerate}
-	\item{} what restrictions we intend to place on classification variables like starrat
-	\item{} possibly describe what starrat is, how it will help id SN
-	\item{} such restrictions cut the number of objects down from xx to $\sim$1000/2000
-\end{enumerate}
-
-
-\section*{Acknowledgments}
-I would like to thank \input acknowledgement.tex  % input acknowledgement
-
-
-
 \iffalse
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  %\clearpage
  \newpage
  \section{REMOVE THESE NOTES WHEN FINISHED}
  %\input JT_meeting_161115_notes.tex 
  \includepdf[pages=-]{JT_meeting_161115_notes.pdf}
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \fi
 
 

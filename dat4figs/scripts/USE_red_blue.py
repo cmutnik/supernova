@@ -44,7 +44,8 @@ def plot2useinPaper():
 	plt.xlim(56400,57800)#56410,57700
 	rect_off_dec = Patches.Rectangle((56400,-90), 1400, 60, color='black', alpha=0.5, lw=0)
 	rect_off_mjd_b4_atlas = Patches.Rectangle((56400,-30), 792, 120, color='black', alpha=0.5, lw=0)
-	rect_off_mjd_bad_diff = Patches.Rectangle((57192,-30), 145, 120, color='black', alpha=0.25, lw=0)
+	#rect_off_mjd_bad_diff = Patches.Rectangle((57192,-30), 145, 120, color='black', alpha=0.25, lw=0)
+	rect_off_mjd_bad_diff = Patches.Rectangle((57192,-30), 172, 120, color='black', alpha=0.25, lw=0)
 	rect_off_part_over60 = Patches.Rectangle((57500,60), 300, 30, color='black', alpha=0.5, lw=0)
 	ax.add_patch(rect_off_dec)
 	ax.add_patch(rect_off_mjd_b4_atlas)
@@ -63,7 +64,7 @@ def plot2useinPaper():
 	plt.scatter(newpeaking,newdec,s=news_fixed, marker='o', c='blue')
 	plt.savefig('plot2useinPaper.png')
 	#plt.show()
-plot2useinPaper()
+#plot2useinPaper()
 
 def plot2useinPaper_restrictx():
 	plt.clf()
@@ -73,7 +74,8 @@ def plot2useinPaper_restrictx():
 	plt.xlabel('Peak Brightness MJD')
 	rect_off_dec = Patches.Rectangle((56400,-90), 1400, 60, color='black', alpha=0.5, lw=0)
 	rect_off_mjd_b4_atlas = Patches.Rectangle((56400,-30), 792, 120, color='black', alpha=0.5, lw=0)
-	rect_off_mjd_bad_diff = Patches.Rectangle((57192,-30), 145, 120, color='black', alpha=0.25, lw=0)
+	#rect_off_mjd_bad_diff = Patches.Rectangle((57192,-30), 145, 120, color='black', alpha=0.25, lw=0)
+	rect_off_mjd_bad_diff = Patches.Rectangle((57192,-30), 172, 120, color='black', alpha=0.25, lw=0)
 	rect_off_part_over60 = Patches.Rectangle((57500,60), 300, 30, color='black', alpha=0.5, lw=0)
 	ax.add_patch(rect_off_dec)
 	ax.add_patch(rect_off_mjd_b4_atlas)
@@ -94,7 +96,7 @@ def plot2useinPaper_restrictx():
 	plt.scatter(newpeaking,newdec,s=news_fixed, marker='o', c='blue')
 	plt.savefig('plot2useinPaper_restrictx.png')
 	#plt.show()
-plot2useinPaper_restrictx()
+#plot2useinPaper_restrictx()
 
 def plot2useinPaper_restrictxfurther():
 	plt.clf()
@@ -104,15 +106,16 @@ def plot2useinPaper_restrictxfurther():
 	plt.xlabel('Peak Brightness MJD')
 	rect_off_dec = Patches.Rectangle((56400,-90), 1400, 60, color='black', alpha=0.5, lw=0)
 	rect_off_mjd_b4_atlas = Patches.Rectangle((56400,-30), 792, 120, color='black', alpha=0.5, lw=0)
-	rect_off_mjd_bad_diff = Patches.Rectangle((57192,-30), 145, 120, color='black', alpha=0.25, lw=0)
-	rect_off_part_over60 = Patches.Rectangle((57500,60), 300, 30, color='black', alpha=0.5, lw=0)
+	#rect_off_mjd_bad_diff = Patches.Rectangle((57192,-30), 145, 120, color='black', alpha=0.25, lw=0)
+	rect_off_mjd_bad_diff = Patches.Rectangle((57192,-30), 172, 120, color='black', alpha=0.25, lw=0)
+	rect_off_part_over60 = Patches.Rectangle((57480,60), 300, 30, color='black', alpha=0.5, lw=0)
 	ax.add_patch(rect_off_dec)
 	ax.add_patch(rect_off_mjd_b4_atlas)
 	ax.add_patch(rect_off_mjd_bad_diff)
 	ax.add_patch(rect_off_part_over60)
 	plt.ylim(-90,90)
-	plt.xlim(57200,57800)#56410,57700
-	xtickvals=[57000,57200,57400,57600,57800]# evens
+	plt.xlim(57192,57800)#56410,57700
+	xtickvals=[57200,57300,57400,57500,57600,57700,57800]# evens
 	#ytickvals = [90-(m*20) for m in range(10)]# = [-90,-70,-50,-30,-10,10,30,50,70,90]
 	ytickvals = [80-(m*20) for m in range(9)]
 	ax.set_xticks(xtickvals)
