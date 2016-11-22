@@ -108,7 +108,7 @@ def plot2useinPaper_restrictxfurther():
 	rect_off_mjd_b4_atlas = Patches.Rectangle((56400,-30), 792, 120, color='black', alpha=0.5, lw=0)
 	#rect_off_mjd_bad_diff = Patches.Rectangle((57192,-30), 145, 120, color='black', alpha=0.25, lw=0)
 	rect_off_mjd_bad_diff = Patches.Rectangle((57192,-30), 172, 120, color='black', alpha=0.25, lw=0)
-	rect_off_part_over60 = Patches.Rectangle((57480,60), 300, 30, color='black', alpha=0.5, lw=0)
+	rect_off_part_over60 = Patches.Rectangle((57480,60), 320, 30, color='black', alpha=0.5, lw=0)
 	ax.add_patch(rect_off_dec)
 	ax.add_patch(rect_off_mjd_b4_atlas)
 	ax.add_patch(rect_off_mjd_bad_diff)

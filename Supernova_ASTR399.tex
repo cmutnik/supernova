@@ -82,7 +82,7 @@ before ASASSN is able to.\\
 %We expect to identify all supernovae (SN) above a declination of $-30\deg$, with $m>17.5$, before ASASSN is able to.\\
 {\bf m$>$17.5 --OR-- $m>17.5$}\\
 {\bf 17.5 (0.5mag) --OR-- 18 (1mag) fainter...which is it?}\\
-{\bf not emphasis on Type Ia supernovae?}
+{\bf not emphasis on type Ia supernovae (SNIa)?}
 \end{abstract}
 
 
@@ -91,38 +91,36 @@ before ASASSN is able to.\\
 
 
 \section{Introduction}
+{\bf WHY DO WE CARE\\
+whats special about SNe\\
+what can they tell us\\
+note we plan to focus on type Ia SNe\\}
 {\bf Supernova (SN)}\\
-{\bf check plurality throughout paper: SN or SNe}\\
+{\bf Supernovae (SNe)}\\
+{\bf type Ia supernova (SNIa)}\\
 Supernovae (SNe) identification using data collected by ATLAS.\\
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%
-% Input general notes and things that need to be fixed / addressed
-%%%
-\input general_notes.tex
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\subsection{Importance of SNe}
 
+\indent Astronomers use SNe to ...
+SNe are extremely important in cosmology.
 
-\iffalse
- \section{Observations}
- \section{Data Processing}
-\fi
 
 
 \section{Collected Data}
 
 %\section{ASASSN Breakdown}
 \subsection{ASASSN Data}
-\begin{itemize}
-	%\item{} {\bf Where'd it come from}
-	%\item{} {\bf ASASSN specs}
+\iffalse
+  \begin{itemize}
+	\item{} {\bf Where'd it come from}
+	\item{} {\bf ASASSN specs}
 	\item{} {\bf ASASSN or ASAS--SN}
-	%\item{} {\bf images have 7.8\arcsec pixels}
-\end{itemize}
-
+	\item{} {\bf images have 7.8\arcsec pixels}
+  \end{itemize}
+\fi
+{\bf ``ASASSN'' --OR-- ``ASAS--SN''\\}
 
 \indent The All-Sky Automated Survey for Supernovae (ASASSN) group 
 collects data using eight $14~cm$ telescopes. Each night, these  
@@ -189,22 +187,75 @@ confirmation images with larger telescopes.
 
 
 \subsection{ATLAS}
-ATLAS PathFinder 2 Observations
+{\bf Cleanup \& reword this section.\\}
+
 \begin{itemize}
-	\item{} ATLAS specs
+	\item{} rename section specifically after telescope 02a?
+	\item{} cite Tonry et al. (2011)~\cite{ATLAS_data}
+	\item{} ATLAS specs~\cite{ATLAS_data}
 	\item{} how data was collected
 	\item{} how *.diff.fz is made - subtract wallpaper from reduced data
 	\item{} how *.ddt is made
 	\item{} what is starrat
-	\item{} \cite{ATLAS_data}
+	\item{} possible mention upcoming re--reduction of data
 	%\item{} reduced data became good around 57364
+	%\item{} cover full sky every 4 nights
+	%\item{} ~~~important because SNe are short-lived
+	%\item{} ~~~likely we will catch all Type Ia SNe
+	%\item{} 5 obs/night gives low false alarm rate
+	\item{} is there an offset in observation pattern?
 \end{itemize}
 
-ATLAS began collecting data in June 2015. Reduction methods 
+\indent ATLAS began collecting data in June 2015. Reduction methods 
 are always being refined and improved. Data reduced before 
-December 2015 is not trusted, when ATLAS became truly operational.\\
+ATLAS became truly operational, in December 2015, is not trusted.\\
 %Although ATLAS came on-line in June 2015, data reduced before December 2015 is not trusted. 
-{\bf REWORD}
+%
+%
+\indent Each night ATLAS covers {\bf $\sim$xx~deg$^{2}$} five times over. 
+%Each night, ATLAS collects 5 sets of observationsobserves {\bf $\sim$xx~deg$^{2}$} of the sky. 
+%Each night, ATLAS observes {\bf $\sim$xx~deg$^{2}$} of the sky. 
+An object is determined to be real if it appears in all good 
+observations overlapping that region of the sky. 
+If an object appears in one of the images, it is expected to appear 
+%in the other four images collected that night. 
+in the other four images collected that night that overlap the same region on the sky. 
+This {\bf expectation / requirement} drastically reduces the false alarm rate. 
+%
+%
+\indent Prior to April 2016, ATLAS made four {\bf duplicate} observations per 
+night. Increasing the number of observations per night from 4 to 5, 
+while maintaining the same 4 day cadence required an upper limit to 
+be placed at dec=+60\deg. This is shown by the dark gray region in 
+the upper right hand corner of Figure~\ref{fig:dec_mjd}.
+%
+%
+\indent With a relatively short average lifetime, detection of SNIa requires 
+frequent coverage of the entire sky. Using current observation patterns,
+ATLAS surveys the entire sky, between $-30\deg<dec<+60$, in just 4 nights. 
+% allow for the entire sky to be surveyed every 4 nights. 
+Five observations of the entire sky are recorded by ATLAS every four nights, 
+making detection of all SNIa possible.
+
+
+{\bf An offset in the observation pattern would allow objects that fall 
+on the edge of a detector to be observed over 5 times a night...Does 
+such an offset exist?}
+
+
+
+\subsubsection{Difference Imaging}
+{\bf \noindent Write this portion, then decide where it fits best\\
+\indent subsection in ``Collected Data''\\
+\indent subsubsection in atlas data\\
+\indent independent section\\
+\indent part of procedure section\\
+discuss procedure of subtracting wallpaper\\
+what is wallpaper\\
+*.diff.fz\\
+*.ddt\\
+advantages of difference imaging\\}
+
 
 
 \section{Procedure}
@@ -218,9 +269,9 @@ December 2015 is not trusted, when ATLAS became truly operational.\\
 $0.9 < starrat < 1.2$\\}
 %{\bf [check date]\\}
 {\bf possibly include starrat figure\\
-use DS9 image?\\
-~~~remake it\\
-~~~identify exact dates shown by tiles}
+use DS9 image? if so, then:\\
+\indent remake it\\
+\indent identify exact dates shown by tiles}
 
 \indent In order to assassinate ASASSN, 
 %\indent Before assassinating ASASSN became a possibility,
@@ -270,7 +321,7 @@ classification variables drastically reduces the false alarm rate, requiring
 visually inspection of fewer objects. This shows the ability for ATLAS to 
 identify all SNe faster and fainter than ASASSN is able to.
 
-
+{\bf Detection of all SNIa is possible using ATLAS.\\}
 {\bf As seen in Figure~\ref{fig:dec_mjd}, SNe that were not 
 observed ATLAS fall on the edges of observation limits.\\}
 %\section{Results}
@@ -296,7 +347,30 @@ I would like to thank \input acknowledgement.tex  % input acknowledgement
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
+% Input general notes and things that need to be fixed / addressed
+% REMOVE ONCE FINISHED
+%%%
+\clearpage
+\begin{widetext} % make something one column...usually used for long equations...works, but resize looks better
+ \section{General Notes \& Things to Address}
+ \input general_notes.tex\\
+ {\bf check plurality throughout paper: SN or SNe\\}
+ {\bf make sure acronyms are only defined once\\}
+ {\bf Verify Tonry et al. (2011) journal is cited properly: PASP\\}
+ {\bf Check JT's papers for proper capitalization:\\
+ \indent Type Ia Supernovae\\
+ \indent Type Ia supernovae\\
+ \indent type Ia Supernovae\\
+ \indent type Ia Supernovae\\}
+\end{widetext}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
 % Input variations in plot
+% REMOVE ONCE FINISHED
 %%%
 \newpage
 \input figures/variations/variations.tex
