@@ -76,13 +76,14 @@ Using current data collection and reduction techniques, we plan to
 identify supernovae (SNe) faster and fainter than the All-Sky Automated 
 Survey for Supernovae (ASASSN) team is able to. 
 %With a declination limit of $-30^{\circ}$
-We expect to identify all SNe, with $m>17.5$ and declinations above $-30\deg$, 
+We expect to identify all SNe, with m$>$17.5 and declinations above $-30\deg$, 
 before ASASSN is able to.\\
 %For SNe with $m>17.5$ and declination (dec) $>-30\deg$
 %We expect to identify all supernovae (SN) above a declination of $-30\deg$, with $m>17.5$, before ASASSN is able to.\\
-{\bf m$>$17.5 --OR-- $m>17.5$}\\
+{\bf -30 or -40, JT says -40...choose one and be consistent}\\
 {\bf 17.5 (0.5mag) --OR-- 18 (1mag) fainter...which is it?}\\
-{\bf not emphasis on type Ia supernovae (SNIa)?}
+{\bf not emphasis on type Ia supernovae (SNIa)?}\\
+{\bf Asteroid Terrestrial-impact Last Alert System (ATLAS)}
 \end{abstract}
 
 
@@ -102,9 +103,9 @@ Supernovae (SNe) identification using data collected by ATLAS.\\
 
 
 \subsection{Importance of SNe}
-
-\indent Astronomers use SNe to ...
-SNe are extremely important in cosmology.
+{\bf \noindent Discuss why we care about finding SNe\\
+\indent Astronomers use SNe to ...\\
+\indent SNe are extremely important in cosmology.}
 
 
 
@@ -120,7 +121,6 @@ SNe are extremely important in cosmology.
 	\item{} {\bf images have 7.8\arcsec pixels}
   \end{itemize}
 \fi
-{\bf ``ASASSN'' --OR-- ``ASAS--SN''\\}
 
 \indent The All-Sky Automated Survey for Supernovae (ASASSN) group 
 collects data using eight $14~cm$ telescopes. Each night, these  
@@ -181,12 +181,63 @@ confirmation images with larger telescopes.
 		\caption{\it \small{ }}
 		\label{fig:dechist}
 	\end{subfigure}
-	\caption{\it \small{SN discovered by the ASASSN project.  Panel `(a)' shows ASASSN SN discovery dates.  Panel `(b)' is ASASSN data, binned by dec. The vertical line at $-30^{\circ}$ indicates the lower limit on ATLAS observations.}}
+	\caption{\it \small{SN discovered by the ASASSN project.  Panel `(a)' shows ASASSN SN discovery dates.  Panel `(b)' is ASASSN data, binned by Dec. The vertical line at $-30^{\circ}$ indicates the lower limit on ATLAS observations.}}
 	\label{fig:asnhist}
 \end{figure*}
 
 
 \subsection{ATLAS}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input contributions from John
+%\newpage
+%\input contributions/JT_portion.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ATLAS is a project funded by NASA to find dangerous asteroids.  The
+motivation and science justification was described 
+{\bf by~\cite{ATLAS_data}. --OR--  Tonry (2011)}.
+For the duration of this ASASSN project, ATLAS used an f/2, 0.5~m
+Schmidt telescope on Haleakala and a 110~Mpixel detector to collect
+30~deg$^2$ with each exposure.  This telescope was installed in Jun
+2015, and achieved more or less continuous operation around Sep 2015.
+
+ATLAS will shortly install a second telescope on Mauna Loa, and a
+proposal to NASA is being evaluated to build two more units for the
+southern hemisphere.
+
+The pixel size is 1.86\arcsec\ and the field of view is
+5.4$\times$5.4~deg.  The PSF is currently no better than 6.5\arcsec\
+which degrades the limiting sensitivity by one magnitude.  The faulty
+Schmidt corrector will be replaced in March 2017.  ATLAS uses two
+filters ``$o$'' (essentially $r+i$) and ``$c$'' (essentially $g+r$),
+changing according to the phase of the moon.
+
+%With the basic observation consisting of 30~sec exposures and about 
+%13~sec of overhead, about 900 observations are collected each night. 
+The basic observation consists of 30~sec of shutter open and about
+13~sec of overhead, so that about 900 observations are collected per night.  
+The observation strategy has varied since the telescope was
+installed, but currently observes one of four Dec bands between $-40$
+and $+60$ Dec, imaging each spot 5 times on a $\sim$15~min cadence.
+The overlap between observations is about 0.4~deg, and they are
+dithered by a random amount for a given night, so each objects is seen
+5 or more times, depending on whether it falls in an overlap.
+{\bf wording}
+
+The observations are processed by the ATLAS pipeline which consists of
+image flattening, star finding, star identification, high precision
+fits to astrometry (typically RMS of 0.3\arcsec\ per star and more
+than 10,000 stars) and photometry (typically 0.1~mag~RMS, limited by
+{\bf current reference catalog)}, image differencing against a static sky
+image, and detection of objects that have moved or changed.  
+Difference imaging and the detection of changing objects 
+are discussed in~\cref{sec:diffimg}.
+
+
+
+
+\subsubsection{Remove - Is This Double Talk?}
 {\bf Cleanup \& reword this section.\\}
 
 \begin{itemize}
@@ -194,16 +245,13 @@ confirmation images with larger telescopes.
 	\item{} cite Tonry et al. (2011)~\cite{ATLAS_data}
 	\item{} ATLAS specs~\cite{ATLAS_data}
 	\item{} how data was collected
-	\item{} how *.diff.fz is made - subtract wallpaper from reduced data
-	\item{} how *.ddt is made
-	\item{} what is starrat
+	\item{} is there an offset in observation pattern?
 	\item{} possible mention upcoming re--reduction of data
 	%\item{} reduced data became good around 57364
 	%\item{} cover full sky every 4 nights
 	%\item{} ~~~important because SNe are short-lived
 	%\item{} ~~~likely we will catch all Type Ia SNe
 	%\item{} 5 obs/night gives low false alarm rate
-	\item{} is there an offset in observation pattern?
 \end{itemize}
 
 \indent ATLAS began collecting data in June 2015. Reduction methods 
@@ -223,19 +271,24 @@ in the other four images collected that night that overlap the same region on th
 This {\bf expectation / requirement} drastically reduces the false alarm rate. 
 %
 %
-\indent Prior to April 2016, ATLAS made four {\bf duplicate} observations per 
+\indent Prior to April 2016, ATLAS made four {\bf (duplicate)} observations per 
 night. Increasing the number of observations per night from 4 to 5, 
 while maintaining the same 4 day cadence required an upper limit to 
-be placed at dec=+60\deg. This is shown by the dark gray region in 
+be placed at a Dec of $+60$\deg. This is shown by the dark gray region in 
 the upper right hand corner of Figure~\ref{fig:dec_mjd}.
 %
 %
 \indent With a relatively short average lifetime, detection of SNIa requires 
 frequent coverage of the entire sky. Using current observation patterns,
-ATLAS surveys the entire sky, between $-30\deg<dec<+60$, in just 4 nights. 
-% allow for the entire sky to be surveyed every 4 nights. 
+ATLAS surveys the entire sky, between $-30$ and $+60$ Dec, in just 4 nights. 
 Five observations of the entire sky are recorded by ATLAS every four nights, 
 making detection of all SNIa possible.
+%
+%
+\indent Once collected, raw observations are reduced using the ATLAS pipeline. 
+{\bf cite what? private communication with John?}
+For easier extraction of desired data, reduced images are differenced. 
+The process of difference imaging is discussed in~\cref{sec:diffimg}. 
 
 
 {\bf An offset in the observation pattern would allow objects that fall 
@@ -244,17 +297,102 @@ such an offset exist?}
 
 
 
-\subsubsection{Difference Imaging}
-{\bf \noindent Write this portion, then decide where it fits best\\
-\indent subsection in ``Collected Data''\\
-\indent subsubsection in atlas data\\
-\indent independent section\\
-\indent part of procedure section\\
-discuss procedure of subtracting wallpaper\\
-what is wallpaper\\
-*.diff.fz\\
-*.ddt\\
-advantages of difference imaging\\}
+\subsubsection{Difference Imaging}\label{sec:diffimg}
+\iffalse
+ {\bf \noindent Write this portion, then decide where it fits best\\
+ \indent subsection in ``Collected Data''\\
+ \indent subsubsection in atlas data\\
+ \indent independent section\\
+ \indent part of procedure section\\
+ discuss procedure of subtracting wallpaper\\
+ what is wallpaper\\
+ how *.diff.fz is made - subtract wallpaper from reduced data\\
+ how *.ddt is made (if discussed here, must be subsubsection of atlas)\\
+ what is starrat\\
+ }
+\fi
+
+Difference images are generated by subtracting the wallpaper from reduced 
+images. This is done to isolate objects that are changing. Subtraction 
+of a properly calibrated wallpaper will produced a difference image \\
+containing only objects that are changing in the reduced images.  \\
+{\bf with no objects that are static in the reduced images.  }\\
+{\bf will remove all static objects from the difference image.  }\\
+
+The ``wallpaper'' (static sky image) is the weighted sum of many, many
+observations at each point in the sky.  ATLAS currently uses the
+Alard algorithm {\bf (Alard \& Lupton, 199x)} for differencing, and the
+differences are dominated by photon noise and by systematics from
+saturated stars or flare artifacts from the Schmidt corrector.
+
+
+{\bf\noindent include comparison figure?:\\ \indent red and diff imgs}
+
+
+The ATLAS mission is to find moving objects, but our processing
+automatically finds all stationary transients and variable stars as
+well.  Once the image is difference, the program tphot detects all
+sources at 3-sigma, and cut that back to 5-sigma once each source
+has been fitted and the detection significance is known.  This
+is augmented by calculated RA, Dec, magnitudes, and other relevant
+quantities into a ``ddt'' (difference detection table) file.
+
+
+
+
+Stationary transients stand out in difference images, increasing their probability of detection.\\
+{\bf other advantages of difference imaging\\}
+{\bf REREAD \& REWORD section, when finished\\}
+\begin{verbatim}
+    detection ------ real -- asteroid (moving)
+    /   \            /   \
+   /     \          /     \
+other  artifact  variable  stationary
+       /   |  \   stars    transients
+      /    |   \
+StarScar   ?    ?
+\end{verbatim}
+{\bf Make verbatism diagram into flowchart}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input contributions from  Ari
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
+%\section*{Ari Contribution}
+%\input contributions/AH_portion.tex
+%The most useful identification variable is the starratio (starrat), 
+%which is defined to be the ratio of flux on the original, unsubtracted 
+%image to flux on the difference image.
+starrat (short for star ratio) is the ratio of flux on the original, 
+unsubtracted image to flux on the difference image. Both fluxes are 
+measured in a circular aperture of 2.0~pixel radius. The star ratio 
+is useful because it helps us weed out detections that are not real 
+objects but just residuals from subtracted stars. For these, the star 
+ratio will be large (usually greater than 5) because the star was much 
+brighter before it was subtracted. For asteroids and supernovae, we 
+expect the star ratio to be near 1.0: the object isn't usually there, 
+and so it is not in the wallpaper and will not be subtracted at all: 
+its flux will be the same both before and after image subtraction, 
+so starrat=1.0.
+
+Difficulties include cases where a real transient can produce a high 
+starrat, and cases where a false dectection from a star residual can 
+produce a low starrat. The former arise from the fact that supernovae 
+happen in galaxies, which do get subtracted and can raise starrat 
+substantially above 1.0 if they are bright. The latter can occur when 
+we have a star residual detection substantially off-center from the 
+star, so the flux on the unsubtracted image is not as bright as we might 
+expect, and starrat can be lowered to the 2-5 range, or in some odd 
+cases can be negative. So starrat is not foolproof. Nevertheless, a 
+starrat value near 1.0, especially if accompanied by other indications 
+such as consistent astrometry, is a useful piece of evidence pointing 
+toward a real supernova, asteroid, or other interesting transient.
+
+
+
+
 
 
 
@@ -308,7 +446,7 @@ list, visually examination is able to be used in identifying SNe.\\
 %%%
 % input 2 sections: ``Expected Observations'' and ``Failed Matches''
 %%%
-\input section_expected_obs.tex
+\input sections/section_expected_obs.tex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -354,6 +492,7 @@ I would like to thank \input acknowledgement.tex  % input acknowledgement
 \begin{widetext} % make something one column...usually used for long equations...works, but resize looks better
  \section{General Notes \& Things to Address}
  \input general_notes.tex\\
+ {\bf make sure the acronym ``ATLAS'' is defined\\}
  {\bf check plurality throughout paper: SN or SNe\\}
  {\bf make sure acronyms are only defined once\\}
  {\bf Verify Tonry et al. (2011) journal is cited properly: PASP\\}
@@ -362,6 +501,14 @@ I would like to thank \input acknowledgement.tex  % input acknowledgement
  \indent Type Ia supernovae\\
  \indent type Ia Supernovae\\
  \indent type Ia Supernovae\\}
+ {\bf ``ASASSN'' --OR-- ``ASAS--SN''\\}
+ {\bf make sure all paragraphs are broken-up and indented as desired\\}
+ {\bf 1.86\arcsec\ looks better than 1.86\arcsec does...change all to have backslash at the end}
+ {\bf declination (Dec) NOT: dec}
+ {\bf m$>$17.5 --OR-- $m>17.5$\\
+ \indent USE: m$>$17.5}\\
+ {\bf change ``diff'' to difference images, --OR-- define it}\\ 
+ %{\bf make sure all figures are referenced and done so properly}
 \end{widetext}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -377,8 +524,6 @@ I would like to thank \input acknowledgement.tex  % input acknowledgement
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 
 
 \iffalse

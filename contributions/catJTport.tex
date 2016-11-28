@@ -1,0 +1,46 @@
+ATLAS is a project funded by NASA to find dangerous asteroids.  The
+motivation and science justification was described by Tonry (2011).
+For the duration of this ASASSN project, ATLAS used an f/2, 0.5~m
+Schmidt telescope on Haleakala and a 110~Mpixel detector to collect
+30~deg$^2$ with each exposure.  This telescope was installed in Jun
+2015, and achieved more or less continuous operation around Sep 2015.
+
+ATLAS will shortly install a second telescope on Mauna Loa, and a
+proposal to NASA is being evaluated to build two more units for the
+southern hemisphere.
+
+The pixel size is 1.86\arcsec\ and the field of view is
+5.4$\times.4~deg.  The PSF is currently no better than 6.5\arcsecwhich degrades the limiting sensitivity by one magnitude.  The faulty
+Schmidt corrector will be replaced in March 2017.  ATLAS uses two
+filters "$" (essentially +i$) and "$" (essentially +r$),
+changing according to the phase of the moon.
+
+The basic observation consists of 30~sec of shutter open and about
+13~sec of overhead, so that about 900 observations are collected per
+night.  The observation strategy has varied since the telescope was
+installed, but currently observes one of four Dec bands between himBH40$
+and $+60$ Dec, imaging each spot 5 times on a $\sim5~min cadence.
+The overlap between observations is about 0.4~deg, and they are
+dithered by a random amount for a given night, so each objects is seen
+5 or more times, depending on whether it falls in an overlap.
+
+The observations are processed by the ATLAS pipeline which consists of
+image flattening, star finding, star identification, high precision
+fits to astrometry (typically RMS of 0.3\arcsec\ per star and more
+than 10,000 stars) and photometry (typically 0.1 mag RMS, limited by
+current reference catalog), image differencing against a static sky
+image, and detection of objects that have moved or changed.
+
+The "wallpaper" (static sky image) is the weighted sum of many, many
+observations at each point in the sky.  ATLAS currently uses the
+Alard algorithm (Alard \& Lupton, 199x) for differencing, and the
+differences are dominated by photon noise and by systematics from
+saturated stars or flare artifacts from the Schmidt corrector.
+
+The ATLAS mission is to find moving objects, but our processing
+automatically finds all stationary transients and variable stars as
+well.  Once the image is difference, the program tphot detects all
+sources at 3-sigma, and cut that back to 5-sigma once each source
+has been fitted and the detection significance is known.  This
+is augmented by calculated RA, Dec, magnitudes, and other relevant
+quantities into a "ddt" (difference detection table) file.

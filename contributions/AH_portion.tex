@@ -1,0 +1,26 @@
+%The most useful identification variable is the starratio (starrat), 
+%which is defined to be the ratio of flux on the original, unsubtracted 
+%image to flux on the difference image.
+starrat (short for star ratio) is the ratio of flux on the original, 
+unsubtracted image to flux on the difference image. Both fluxes are 
+measured in a circular aperture of 2.0~pixel radius. The star ratio 
+is useful because it helps us weed out detections that are not real 
+objects but just residuals from subtracted stars. For these, the star 
+ratio will be large (usually greater than 5) because the star was much 
+brighter before it was subtracted. For asteroids and supernovae, we 
+expect the star ratio to be near 1.0: the object isn't usually there, 
+and so it is not in the wallpaper and will not be subtracted at all: 
+its flux will be the same both before and after image subtraction, so starrat=1.0.
+
+Difficulties include cases where a real transient can produce a high 
+starrat, and cases where a false dectection from a star residual can 
+produce a low starrat. The former arise from the fact that supernovae 
+happen in galaxies, which do get subtracted and can raise starrat 
+substantially above 1.0 if they are bright. The latter can occur when 
+we have a star residual detection substantially off-center from the 
+star, so the flux on the unsubtracted image is not as bright as we might 
+expect, and starrat can be lowered to the 2-5 range, or in some odd 
+cases can be negative. So starrat is not foolproof. Nevertheless, a 
+starrat value near 1.0, especially if accompanied by other indications 
+such as consistent astrometry, is a useful piece of evidence pointing 
+toward a real supernova, asteroid, or other interesting transient.
