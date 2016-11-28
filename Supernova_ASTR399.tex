@@ -13,6 +13,7 @@
 \usepackage{float}		% allows use of 'H' command
 \usepackage{tikz}		% lets you draw: graphics, flowcharts, pie graphs, etc
 %\usepackage[final]{pdfpages}	% allows extern pdf to be included
+\usetikzlibrary{arrows}
 
 %%%
 % For fancy section references
@@ -331,65 +332,100 @@ saturated stars or flare artifacts from the Schmidt corrector.
 
 The ATLAS mission is to find moving objects, but our processing
 automatically finds all stationary transients and variable stars as
-well.  Once the image is difference, the program tphot detects all
+well.  Once the image is differenced, the program tphot detects all
 sources at 3-sigma, and cut that back to 5-sigma once each source
-has been fitted and the detection significance is known.  This
-is augmented by calculated RA, Dec, magnitudes, and other relevant
+has been fitted and the detection significance is known.  
+This is augmented by calculated RA, Dec, magnitudes, and other relevant
 quantities into a ``ddt'' (difference detection table) file.
-
+{\bf wording}
 
 
 
 Stationary transients stand out in difference images, increasing their probability of detection.\\
 {\bf other advantages of difference imaging\\}
 {\bf REREAD \& REWORD section, when finished\\}
-\begin{verbatim}
-    detection ------ real -- asteroid (moving)
-    /   \            /   \
-   /     \          /     \
-other  artifact  variable  stationary
-       /   |  \   stars    transients
-      /    |   \
-StarScar   ?    ?
-\end{verbatim}
-{\bf Make verbatism diagram into flowchart}
+
+%\begin{verbatim}
+%    detection ------ real -- asteroid (moving)
+%    /   \            /   \
+%   /     \          /     \
+%other  artifact  variable  stationary
+%       /   |  \   stars    transients
+%      /    |   \
+%StarScar   ?    ?
+%\end{verbatim}
+%{\bf Make verbatism diagram into flowchart}
+\begin{figure}[H]
+ \resizebox{3in}{!}{%
+ \tikzset{
+  treenode/.style = {align=center, inner sep=1pt, font=\sffamily},
+  arn_m/.style = {treenode, rectangle, rounded corners=1mm, black,
+  font=\sffamily\bfseries, draw=black, minimum width=7em},
+  arn_n/.style = {treenode, rectangle, black, font=\sffamily\bfseries, draw=black, minimum width=2em},
+  arn_r/.style = {treenode, rectangle, black, draw=black, minimum width=3em, very thick},
+  arn_x/.style = {treenode, rectangle, draw=black, minimum width=0.5em, minimum height=0.5em}
+ }
+ \begin{tikzpicture}[->,>=stealth',level/.style={sibling distance = 2.5cm/#1,
+  level distance = 1cm}] 
+ \node [arn_m] {Detections}
+    child{ node [arn_r] {Real} 
+            child{ node [arn_n] {Asteroid} edge from parent node[above left]
+                    {$moving$}%for a named pointer
+            }
+            child{ node [arn_n] {Var}}
+            child{ node [arn_n] {ST}}
+    }
+    child{ node [arn_r] {(Other)}
+    }
+    child{ node [arn_r] {Artifact}   
+            child{ node [arn_n] {Star Scar}}
+            child{ node [arn_n] {CR}}
+            child{ node [arn_n] {Burn}}
+            child{ node [arn_n] {xtalk}}                         
+    }
+ ; 
+ \end{tikzpicture}%
+ }%
+ \caption{\small{Probability flowchart. Real - Asteroid are moving objects, ST stands for stationary transient, Var is variable star...discuss artifacts\label{fig:probflow}}}
+\end{figure}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Input contributions from  Ari
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\newpage
-%\section*{Ari Contribution}
 %\input contributions/AH_portion.tex
-%The most useful identification variable is the starratio (starrat), 
-%which is defined to be the ratio of flux on the original, unsubtracted 
-%image to flux on the difference image.
-starrat (short for star ratio) is the ratio of flux on the original, 
-unsubtracted image to flux on the difference image. Both fluxes are 
-measured in a circular aperture of 2.0~pixel radius. The star ratio 
-is useful because it helps us weed out detections that are not real 
-objects but just residuals from subtracted stars. For these, the star 
-ratio will be large (usually greater than 5) because the star was much 
-brighter before it was subtracted. For asteroids and supernovae, we 
-expect the star ratio to be near 1.0: the object isn't usually there, 
-and so it is not in the wallpaper and will not be subtracted at all: 
-its flux will be the same both before and after image subtraction, 
-so starrat=1.0.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The most useful classification variable is ``starrat'' (star ratio), 
+which is defined to be the ratio of flux on the original, un--subtracted 
+image to flux on the difference image.  Both fluxes are measured using a 
+circular aperture of 2.0~pixel radius.  The star ratio is used in 
+determining if an object is real or just a residuals from subtracted stars.  
+For these, the star ratio will be large (usually greater than 5) because 
+the star was much brighter before it was subtracted.  For asteroids and 
+supernovae, we expect the star ratio to be near 1.0.  Since they are not 
+usually in their recorded locations, such objects should not show up in the wallpaper.  
+%Any object that isn't in the wallpaper is left unchanged by difference imaging, causing the recorded flux to be the same both before and after image subtraction, and resulting in a starrat of 1.0.
+Any object that isn't in the wallpaper is left unchanged by difference imaging.  
+This means the recorded flux to be the same both before and after image subtraction, 
+resulting in starrat=1.0.
+
+{\bf possibly include starrat figure here}\\
+{\bf in results section get into the range for starrat values}
 
 Difficulties include cases where a real transient can produce a high 
-starrat, and cases where a false dectection from a star residual can 
+starrat, and cases where a false detection from a star residual can 
 produce a low starrat. The former arise from the fact that supernovae 
 happen in galaxies, which do get subtracted and can raise starrat 
 substantially above 1.0 if they are bright. The latter can occur when 
 we have a star residual detection substantially off-center from the 
-star, so the flux on the unsubtracted image is not as bright as we might 
+star, so the flux on the un--subtracted image is not as bright as we might 
 expect, and starrat can be lowered to the 2-5 range, or in some odd 
 cases can be negative. So starrat is not foolproof. Nevertheless, a 
 starrat value near 1.0, especially if accompanied by other indications 
 such as consistent astrometry, is a useful piece of evidence pointing 
-toward a real supernova, asteroid, or other interesting transient.
-
+toward a real SN, asteroid, or other interesting transient.
 
 
 
