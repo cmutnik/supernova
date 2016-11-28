@@ -77,12 +77,15 @@ University of Hawaii at Manoa,\\
 \begin{abstract}
 Using current data collection and reduction techniques, we plan to 
 identify supernovae (SNe) faster and fainter than the All-Sky Automated 
-Survey for Supernovae (ASASSN) team is able to. 
-%With a declination limit of $-30^{\circ}$
+Survey for Supernovae (ASASSN) team is able to.  
 We expect to identify all SNe, with m$\geq$17.5 and declinations above $-30\deg$, 
-before ASASSN is able to.\\
-%For SNe with $m>17.5$ and declination (dec) $>-30\deg$
-%We expect to identify all supernovae (SN) above a declination of $-30\deg$, with $m>17.5$, before ASASSN is able to.\\
+before ASASSN is able to.  
+Over the course of 4 nights, ATLAS images each spot on the sky a minimum of 5 times.  
+With a minimum of 5 observations per night of each object, it is possible to achieve m$\geq$18.5.  
+In the ATLAS pipeline, images are collected, reduced, and differenced.  To generate difference 
+images, a composite image (wallpaper) is subtracted from the reduced images.   
+Stationary transients stand out in difference images, increasing their probability of detection.  \\
+%With a focus on type Ia supernovae (SNIa), \\
 {\bf -30 or -40, JT says -40...choose one and be consistent}\\
 {\bf 17.5 (0.5mag) --OR-- 18 (1mag) fainter...which is it?}\\
 {\bf not emphasis on type Ia supernovae (SNIa)?}\\
@@ -137,7 +140,7 @@ down to $\sim$17th magnitude.
 %{\bf reword}\\
 These eight telescopes are split evenly between two sites.
 The first telescope array is located on Haleakala and began 
-collecting data in December 2013. In July 2015, the second %telescope 
+collecting data in Dec 2013. In Jul 2015, the second %telescope 
 array became operational at the LCOGT Cerro Tololo station. 
 This allows ASASSN to detect SNe in both 
 hemispheres.~\cite{asn_data}
@@ -187,8 +190,8 @@ larger telescopes.~\footnote{\label{foot:asn} http://www.astronomy.ohio-state.ed
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ATLAS is a project funded by NASA to find dangerous asteroids.  The
-motivation and science justification was described 
-{\bf by~\cite{ATLAS_data}. --OR--  Tonry (2011)}.
+motivation and science justification was described by~\cite{ATLAS_data}.  \\
+{\bf --OR--  Tonry (2011)}.  \\
 For the duration of this ASASSN project, ATLAS used an f/2, 0.5~m
 Schmidt telescope on Haleakala and a 110~Mpixel detector to collect
 30~deg$^2$ with each exposure.  This telescope was installed in Jun
@@ -201,7 +204,7 @@ southern hemisphere.
 The pixel size is 1.86\arcsec\ and the field of view is
 5.4$\times$5.4~deg.  The PSF is currently no better than 6.5\arcsec\
 which degrades the limiting sensitivity by one magnitude.  The faulty
-Schmidt corrector will be replaced in March 2017.  ATLAS uses two
+Schmidt corrector will be replaced in Mar 2017.  ATLAS uses two
 filters ``$o$'' (essentially $r+i$) and ``$c$'' (essentially $g+r$),
 changing according to the phase of the moon.
 
@@ -210,7 +213,7 @@ With the basic observation consisting of a 30~sec exposure and about
 %The basic observation consists of 30~sec of shutter open and about
 %13~sec of overhead, so that about 900 observations are collected per night.  
 The observation strategy has varied since the telescope was
-installed, but currently observes one of four Dec bands between $-30$%$-40$
+installed, but currently observes one of four Dec bands between $-30$ %$-40$
 and $+60$ Dec, imaging each spot 5 times on a $\sim$15~min cadence.
 The overlap between observations is about 0.4~deg, and they are
 dithered by a random amount for a given night, so each objects is seen
@@ -225,7 +228,7 @@ The observations are processed by the ATLAS pipeline which consists of
 image flattening, star finding, star identification, high precision
 fits to astrometry (typically RMS of 0.3\arcsec\ per star and more
 than 10,000 stars) and photometry (typically 0.1~mag~RMS, limited by
-{\bf current reference catalog)}, image differencing against a static sky
+the current reference catalog), image differencing against a static sky
 image, and detection of objects that have moved or changed.  
 Difference imaging and the detection of changing objects 
 are discussed in~\cref{sec:diffimg}.
@@ -242,7 +245,9 @@ containing only objects that are changing in the reduced images.
 
 The ``wallpaper'' (static sky image) is the weighted sum of many, many
 observations at each point in the sky.  ATLAS currently uses the
-Alard algorithm {\bf (Alard \& Lupton, 1998)~\cite{Alard_algorithm}} for differencing, and the
+Alard algorithm~\cite{Alard_algorithm}\\ 
+{\bf (Alard \& Lupton, 1998)} \\ 
+for differencing, and the
 differences are dominated by photon noise and by systematics from
 saturated stars or flare artifacts from the Schmidt corrector.
 
@@ -256,7 +261,7 @@ has been fitted and the detection significance is known.
 This is augmented by calculated RA, Dec, magnitudes, and other relevant
 quantities into a ``ddt'' (difference detection table) file.
 
-Stationary transients stand out in difference images, increasing their probability of detection.\\
+
 {\bf other advantages of difference imaging\\}
 
 %\begin{verbatim}
@@ -300,7 +305,7 @@ Stationary transients stand out in difference images, increasing their probabili
  ; 
  \end{tikzpicture}%
  }%
- \caption{\small{Probability flowchart. Real - Asteroid are moving objects, ST stands for stationary transient, Var is variable star...discuss artifacts\label{fig:probflow}}}
+ \caption{\small{Object classification probability flowchart.  Asteroids are real objects that are moving, ST stands for stationary transient, Var is variable star. Artifacts arise during image processing and are not real objects.\label{fig:probflow}}}
 \end{figure}
 
 
@@ -353,7 +358,8 @@ toward a real SN, asteroid, or other interesting transient.
 	%\item{} manually inspect results for SN classification
 %\end{enumerate}
 {\bf quantify: how many objects are potentially SNe before class.var. restriction, how many after\\
-$0.9 < starrat < 1.2$\\}
+%$0.9 < starrat < 1.2$\\
+}
 %{\bf [check date]\\}
 
 \indent In order to assassinate ASASSN, 
@@ -373,7 +379,8 @@ were found in observations made by ATLAS.
 Finding these SNe in the ATLAS 
 data allowed restrictions to be placed on classification variables, drastically 
 reducing the number of potential SNe candidates. With such a restricted object 
-list, visually examination is able to be used in identifying SNe.\\ 
+list, visually examination is able to be used in identifying SNe.  It has been 
+shown that all SNe can be detected using a star ration between $0.9$ and $1.2$.\\{\bf wording} 
 %These identified SNe allowed for the restriction of ATLAS classification variables.
 
 \iffalse
@@ -404,19 +411,28 @@ list, visually examination is able to be used in identifying SNe.\\
 
 \section{Results and Discussion}
 
-ATLAS had the potential to observe 161 of the 385 SNe ASASSN discovered 
-by Oct 2016.  Before ATLAS was truly operational, another 65 SNe had 
-peaked, leaving 96 objects.  
-{\bf All 96 SNe were found using ATLAS. }\\
-{\bf verify all 96 found with $\pm$day window?}\\
-{\bf merge with para below}
+\indent Of the 385 SNe ASASSN discovered by Oct 2016, only 96 overlapped
+with ATLAS in sky and time.  
+%For the 96 SN that overlap in time and location, 850 total ATLAS observations are expected.
+In \cref{sec:expobs} and \cref{sec:failmatch} we discuss the 850 
+ATLAS observations associated with the 96 SNe expected to be 
+present in ATLAS data.
+%The 850 ATLAS observations associated with the 96 SNe we expected to find are discussed in \cref{sec:expobs} and \cref{sec:failmatch}.
+%{\bf All 96 SNe were found using ATLAS. }\\
+{\bf verify all 96 found with $\pm$day window?}
+%{\bf merge with para below}
+It has been shown that all 96 ASASSN discovered SNe overlapping ATLAS 
+observations in sky and time are detectable in ATLAS data.  
 
-\indent It has been shown that all ASASSN discovered SNe overlapping ATLAS 
-observations in sky and time are detectable in ATLAS data. Restricting 
-classification variables drastically reduces the false alarm rate, requiring 
-visually inspection of fewer objects. This shows the ability for ATLAS to 
-identify all SNe faster and fainter than ASASSN is able to.
-%
+\indent SNe discovered by ASASSN were used in refining ATLAS classification 
+variables, such as starrat.  Variables like starrat reduce the 
+false alarm rate by eliminating artifacts produced during image 
+subtraction.  Using ASASSN objects, we verified SNe have starrat values 
+between $0.9$ and $1.2$.  
+Restricting classification variables drastically reduces the false alarm rate and leads 
+to fewer objects needing to be visually inspection. This shows the ability 
+for ATLAS to identify all SNe faster and fainter than ASASSN is able to.
+
 \indent The detection of all SNIa between $-30$ and 
 $+60$ Dec with m$\geq$17.5 is possible using ATLAS data.  
 %As shown by Figure~\ref{fig:dec_mjd}, ATLAS was able to identify all of the SNe discovered by ASASSN
@@ -424,52 +440,50 @@ All SNe discovered by ASASSN, after ATLAS became truly operational, were
 able to be identified with ATLAS data alone.  This is shown in 
 Figure~\ref{fig:dec_mjd}, with missed SNe falling on the edges of ATLAS 
 observational limits.
-%
-\indent ASASSN discovered SNe were used in refining ATLAS classification 
-variables, such as starrat.  Variables like starrat reduce the 
-false alarm rate by eliminating artifacts produced during image 
-subtraction.  
-%{\bf Detection of all SNIa is possible using ATLAS.\\}
-%{\bf As seen in Figure~\ref{fig:dec_mjd}, SNe that were not 
-%observed ATLAS fall on the edges of observation limits.\\}
-%\section{Results}
-%{\bf Possibly merge these two sections into single: ``Results and Discussion''}\\
-{\bf Summary of data matched between ASASSN and ATLAS.\\
-reference sections that explain particular cases that matching failed}
-%\subsection{Independent SN Identification}
-%\subsection{SN Identification}
-%\section{Discussion}
-\begin{enumerate}
+
+
+{\bf \noindent other classification variables?}\\
+{\bf \noindent quantify how much starrat restrictions cuts down the data\\
+\indent such restrictions cut the number of objects down from xx to $\sim$1000/2000\\
+\indent use cm groupings number
+}
+
+\iffalse
+ \begin{enumerate}
   \item{} How ASASSN SN help identify those in ATLAS data.
 	\item{} what restrictions we intend to place on classification variables like starrat
-	%\item{} possibly describe what starrat is, how it will help id SN
+	\item{} possibly describe what starrat is, how it will help id SN
 	\item{} such restrictions cut the number of objects down from xx to $\sim$1000/2000
   \item{} \indent quantify above, using cm groupings number
   \item{} ref: \cref{sec:expobs} and \cref{sec:failmatch}
-\end{enumerate}
+ \end{enumerate}
+\fi
 
 
-
-
-
-
-
-
-{\bf \noindent BELOW IS FROM PREVIOUS ATLAS SECTION (written by me)
-\indent possibly place it here or in procedure section}\\
-Requiring an object shows up on more than one image recorded in the same night 
-drastically reduces our false alarm rate.\\
-An object is determined to be real if it appears in all good 
-observations overlapping that region of the sky. 
-If an object appears in one of the images, it is expected to appear 
-in the other overlapping images collected that night.
-% images collected that night that overlap the same region on the sky. 
-This {\bf expectation / requirement} drastically reduces the false alarm rate.\\
-\indent With a relatively short average lifetime, detection of SNIa requires 
+\indent With a relatively short average lifespan, detection of a SNIa requires 
 frequent coverage of the entire sky. Using current observation patterns,
 ATLAS surveys the entire sky, between $-30$ and $+60$ Dec, in just 4 nights. 
 Five observations of the entire sky are recorded by ATLAS every four nights, 
-making detection of all SNIa possible.
+making it possible to detect SNIa down to m$\geq$18.5.  During our analysis 
+we ran successful tests down to m~$=18$.\\
+%{\bf \noindent BELOW IS FROM PREVIOUS ATLAS SECTION (written by me)
+%\indent possibly place it here or in procedure section}\\
+\indent To differentiate between real objects 
+and artifacts, we require %an object shows up in the data on 
+objects to show up on 
+more than one image collected during the night it was observed.  
+%Requiring an object shows up on more than one image recorded in the same night 
+%drastically reduces our false alarm rate.
+This requirement drastically reduces our false alarm rate by 
+eliminating artifacts such as star scars, as they 
+are not consistently present.  
+%Star scars are not consistently present, therefore it is unlikely they will appear in more than one image.  
+An object is determined to be real if it appears in all good 
+observations overlapping that region of the sky.  
+If an object appears in one of the images, it is expected to appear 
+in the other overlapping images collected that night.\\
+% images collected that night that overlap the same region on the sky. 
+
 
 
 
@@ -490,21 +504,15 @@ I would like to thank \input acknowledgement.tex  % input acknowledgement
  \section{General Notes \& Things to Address}
  \input general_notes.tex\\
  {\bf make sure the acronym ``ATLAS'' is defined\\}
- {\bf check plurality throughout paper: SN or SNe\\}
- {\bf make sure acronyms are only defined once\\}
  {\bf Verify Tonry et al. (2011) journal is cited properly: PASP\\}
  {\bf Check JT's papers for proper capitalization:\\
  \indent Type Ia Supernovae\\
  \indent Type Ia supernovae\\
  \indent type Ia Supernovae\\
  \indent type Ia Supernovae\\}
- {\bf ``ASASSN'' --OR-- ``ASAS--SN''\\}
- {\bf make sure all paragraphs are broken-up and indented as desired\\}
- {\bf 1.86\arcsec\ looks better than 1.86\arcsec does...change all to have backslash at the end}\\
- {\bf declination (Dec) NOT: dec}\\
  %{\bf m$>$17.5 --OR-- $m>17.5$\\
  %\indent USE: m$>$17.5}\\
- {\bf change ``diff'' to difference images, --OR-- define it}\\ 
+ %{\bf change ``diff'' to difference images, --OR-- define it}\\ 
  {\bf check email if JT \& AH want to be authors or acknowledgments}\\
  {\bf check JT paper to see if authors/acknowledgments \\
  \indent how they were thanked\\
@@ -512,7 +520,15 @@ I would like to thank \input acknowledgement.tex  % input acknowledgement
  %{\bf make sure all figures are referenced and done so properly}
  {\bf Necessary to define MJD?}\\
  {\bf check floats [H]}\\
- {\bf All months abbreviated...consistency}
+ {\bf \noindent consistency\\
+ \indent declination (Dec) NOT: dec\\
+ \indent All months abbreviated\\
+ \indent make sure acronyms are only defined once\\
+ \indent check plurality throughout paper: SN or SNe\\
+ \indent ``ASASSN'' --OR-- ``ASAS--SN''\\
+ \indent make sure all paragraphs are broken-up and indented as desired\\
+ \indent 1.86\arcsec\ looks better than 1.86\arcsec does...change all to have backslash at the end\\
+ }
 \end{widetext}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
