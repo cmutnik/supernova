@@ -214,17 +214,21 @@ Schmidt corrector will be replaced in March 2017.  ATLAS uses two
 filters ``$o$'' (essentially $r+i$) and ``$c$'' (essentially $g+r$),
 changing according to the phase of the moon.
 
-%With the basic observation consisting of 30~sec exposures and about 
-%13~sec of overhead, about 900 observations are collected each night. 
-The basic observation consists of 30~sec of shutter open and about
-13~sec of overhead, so that about 900 observations are collected per night.  
+With the basic observation consisting of a 30~sec exposure and about 
+13~sec of overhead, about 900 observations are collected per night.  
+%The basic observation consists of 30~sec of shutter open and about
+%13~sec of overhead, so that about 900 observations are collected per night.  
 The observation strategy has varied since the telescope was
 installed, but currently observes one of four Dec bands between $-40$
 and $+60$ Dec, imaging each spot 5 times on a $\sim$15~min cadence.
 The overlap between observations is about 0.4~deg, and they are
 dithered by a random amount for a given night, so each objects is seen
-5 or more times, depending on whether it falls in an overlap.
-{\bf wording}
+5 or more times, depending on whether it falls in an overlap.  
+Prior to Apr 2016, ATLAS collected 4 or more observations of each object 
+per night. Increasing the number of observations per night from 4 to 5, 
+while maintaining the same 4 day cadence, required an upper limit to 
+be placed at a $+60$ Dec. This is shown by the dark gray region in 
+the upper right hand corner of Figure~\ref{fig:dec_mjd}.
 
 The observations are processed by the ATLAS pipeline which consists of
 image flattening, star finding, star identification, high precision
@@ -236,66 +240,62 @@ Difference imaging and the detection of changing objects
 are discussed in~\cref{sec:diffimg}.
 
 
+\iffalse
+%\subsubsection{Remove - Is This Double Talk?}
+%{\bf Cleanup \& reword this section.\\}%
 
+%\begin{itemize}
+%	\item{} rename section specifically after telescope 02a?
+%	\item{} cite Tonry et al. (2011)~\cite{ATLAS_data}
+%	\item{} ATLAS specs~\cite{ATLAS_data}
+%	\item{} how data was collected
+%	\item{} is there an offset in observation pattern?
+%	\item{} possible mention upcoming re--reduction of data
+%	%\item{} reduced data became good around 57364
+%	%\item{} cover full sky every 4 nights
+%	%\item{} ~~~important because SNe are short-lived
+%	%\item{} ~~~likely we will catch all Type Ia SNe
+%	%\item{} 5 obs/night gives low false alarm rate
+%\end{itemize}%
 
-\subsubsection{Remove - Is This Double Talk?}
-{\bf Cleanup \& reword this section.\\}
-
-\begin{itemize}
-	\item{} rename section specifically after telescope 02a?
-	\item{} cite Tonry et al. (2011)~\cite{ATLAS_data}
-	\item{} ATLAS specs~\cite{ATLAS_data}
-	\item{} how data was collected
-	\item{} is there an offset in observation pattern?
-	\item{} possible mention upcoming re--reduction of data
-	%\item{} reduced data became good around 57364
-	%\item{} cover full sky every 4 nights
-	%\item{} ~~~important because SNe are short-lived
-	%\item{} ~~~likely we will catch all Type Ia SNe
-	%\item{} 5 obs/night gives low false alarm rate
-\end{itemize}
-
-\indent ATLAS began collecting data in June 2015. Reduction methods 
-are always being refined and improved. Data reduced before 
-ATLAS became truly operational, in December 2015, is not trusted.\\
-%Although ATLAS came on-line in June 2015, data reduced before December 2015 is not trusted. 
-%
-%
-\indent Each night ATLAS covers {\bf $\sim$xx~deg$^{2}$} five times over. 
-%Each night, ATLAS collects 5 sets of observationsobserves {\bf $\sim$xx~deg$^{2}$} of the sky. 
-%Each night, ATLAS observes {\bf $\sim$xx~deg$^{2}$} of the sky. 
-An object is determined to be real if it appears in all good 
-observations overlapping that region of the sky. 
-If an object appears in one of the images, it is expected to appear 
-%in the other four images collected that night. 
-in the other four images collected that night that overlap the same region on the sky. 
-This {\bf expectation / requirement} drastically reduces the false alarm rate. 
-%
-%
-\indent Prior to April 2016, ATLAS made four {\bf (duplicate)} observations per 
-night. Increasing the number of observations per night from 4 to 5, 
-while maintaining the same 4 day cadence required an upper limit to 
-be placed at a Dec of $+60$\deg. This is shown by the dark gray region in 
-the upper right hand corner of Figure~\ref{fig:dec_mjd}.
-%
-%
-\indent With a relatively short average lifetime, detection of SNIa requires 
-frequent coverage of the entire sky. Using current observation patterns,
-ATLAS surveys the entire sky, between $-30$ and $+60$ Dec, in just 4 nights. 
-Five observations of the entire sky are recorded by ATLAS every four nights, 
-making detection of all SNIa possible.
-%
-%
-\indent Once collected, raw observations are reduced using the ATLAS pipeline. 
-{\bf cite what? private communication with John?}
-For easier extraction of desired data, reduced images are differenced. 
-The process of difference imaging is discussed in~\cref{sec:diffimg}. 
-
-
-{\bf An offset in the observation pattern would allow objects that fall 
-on the edge of a detector to be observed over 5 times a night...Does 
-such an offset exist?}
-
+%\indent ATLAS began collecting data in June 2015. Reduction methods 
+%are always being refined and improved. Data reduced before 
+%ATLAS became truly operational, in December 2015, is not trusted.\\
+%%Although ATLAS came on-line in June 2015, data reduced before December 2015 is not trusted. 
+%%
+%%
+%\indent Each night ATLAS covers {\bf $\sim$xx~deg$^{2}$} five times over. 
+%%Each night, ATLAS collects 5 sets of observationsobserves {\bf $\sim$xx~deg$^{2}$} of the sky. 
+%%Each night, ATLAS observes {\bf $\sim$xx~deg$^{2}$} of the sky. 
+%An object is determined to be real if it appears in all good 
+%observations overlapping that region of the sky. 
+%If an object appears in one of the images, it is expected to appear 
+%%in the other four images collected that night. 
+%in the other four images collected that night that overlap the same region on the sky. 
+%This {\bf expectation / requirement} drastically reduces the false alarm rate. 
+%%
+%%
+%\indent Prior to April 2016, ATLAS made four {\bf (duplicate)} observations per 
+%night. Increasing the number of observations per night from 4 to 5, 
+%while maintaining the same 4 day cadence required an upper limit to 
+%be placed at a Dec of $+60$\deg. This is shown by the dark gray region in 
+%the upper right hand corner of Figure~\ref{fig:dec_mjd}.
+%%
+%%
+%\indent With a relatively short average lifetime, detection of SNIa requires 
+%frequent coverage of the entire sky. Using current observation patterns,
+%ATLAS surveys the entire sky, between $-30$ and $+60$ Dec, in just 4 nights. 
+%Five observations of the entire sky are recorded by ATLAS every four nights, 
+%making detection of all SNIa possible.
+%%
+%%
+%\indent Once collected, raw observations are reduced using the ATLAS pipeline. 
+%{\bf cite what? private communication with John?}
+%For easier extraction of desired data, reduced images are differenced. 
+%The process of difference imaging is discussed in~\cref{sec:diffimg}. 
+%%
+%{\bf An offset in the observation pattern would allow objects that fall on the edge of a detector to be observed over 5 times a night...Does such an offset exist?}
+\fi
 
 
 \subsubsection{Difference Imaging}\label{sec:diffimg}
@@ -322,7 +322,7 @@ containing only objects that are changing in the reduced images.  \\
 
 The ``wallpaper'' (static sky image) is the weighted sum of many, many
 observations at each point in the sky.  ATLAS currently uses the
-Alard algorithm {\bf (Alard \& Lupton, 199x)} for differencing, and the
+Alard algorithm {\bf (Alard \& Lupton, 1998)~\cite{Alard_algorithm}} for differencing, and the
 differences are dominated by photon noise and by systematics from
 saturated stars or flare artifacts from the Schmidt corrector.
 
@@ -513,6 +513,25 @@ reference sections that explain particular cases that matching failed}
 \end{enumerate}
 
 
+{\bf \noindent BELOW IS FROM PREVIOUS ATLAS SECTION (one I wrote, nit JT)
+\indent possibly place it here or in procedure section}\\
+Requiring an object shows up on more than one image recorded in the same night 
+drastically reduces our false alarm rate.\\
+An object is determined to be real if it appears in all good 
+observations overlapping that region of the sky. 
+If an object appears in one of the images, it is expected to appear 
+in the other overlapping images collected that night.
+% images collected that night that overlap the same region on the sky. 
+This {\bf expectation / requirement} drastically reduces the false alarm rate.\\
+\indent With a relatively short average lifetime, detection of SNIa requires 
+frequent coverage of the entire sky. Using current observation patterns,
+ATLAS surveys the entire sky, between $-30$ and $+60$ Dec, in just 4 nights. 
+Five observations of the entire sky are recorded by ATLAS every four nights, 
+making detection of all SNIa possible.
+
+
+
+
 \section*{Acknowledgments}
 I would like to thank \input acknowledgement.tex  % input acknowledgement
 
@@ -544,6 +563,8 @@ I would like to thank \input acknowledgement.tex  % input acknowledgement
  {\bf m$>$17.5 --OR-- $m>17.5$\\
  \indent USE: m$>$17.5}\\
  {\bf change ``diff'' to difference images, --OR-- define it}\\ 
+ {\bf check email if JT \& AH want to be authors or acknowledgments}\\
+ {\bf check JT paper to see if authors/acknowledgments include the institution where the person works}\\
  %{\bf make sure all figures are referenced and done so properly}
 \end{widetext}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
