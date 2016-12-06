@@ -13,7 +13,7 @@ These two sets do not exist independent of one another.
 After applying Dec and MJD based restrictions and accounting for overlaps between 
 these groups, 161 SNe remained from the initial 385 reported by ASASSN. 
 %%%
-Another 65 SNe peaked before ATLAS was truly operational, leaving 96 as potential candidates.
+Another 65 SNe peaked before ATLAS was truly operational, leaving 96 as potential candidates.  
 %Although data was being collected, ATLAS was not instantaneously operational.
 %%%
 % CHECK VALIDITY OF THIS
@@ -30,19 +30,19 @@ All 96 of these objects were found in the ATLAS data, resulting in a 100\% compl
 %14 SN were reported to peak by 57364;
 %14 SN were reported to peak on or before 57364; time during which reduced 
 %ATLAS data is considered unreliable.
-Reported peak brightnesses occurring on or before 57364 accounts for 14 SNe. 
+Reported peak brightnesses occurring on or before 57364 accounts for 14 SNe.  
 During this time the ATLAS reduction process was still being refined, making 
-any reduced data unreliable.
+any reduced data unreliable.  
 %Reduction of data, by the ATLAS pipeline, was unreliable before this date.
 %Data reduced by the ATLAS pipeline was not good enough to trust before 57364.
 %%Another 50 fell in regions that had no overlap, due to ATLAS observations patterns.
 Another 50 SNe fell in regions that had no overlap with ATLAS observations due 
-to the pattern in which data was collected.
+to the pattern in which data was collected.  
 %Based on observation patterns, another 50 SN are not expected to have any overlap / to have been observed.
-The final case was a Type II supernova (SNII).
+The final case was a Type II supernova (SNII).  
 %The final SN was a Type II. 
 %SNII are notoriously short lived. This makes it likely that...
-SNII are notoriously short lived; making it likely that ATLAS observed this region of the sky in the 
+SNII are notoriously short lived, making it likely that ATLAS observed this region of the sky in the 
 time surrounding the explosion, but not during the event.
 %Due to the short nature of Type II events, it is likely ATLAS observed that region of the sky in the 
 %time surrounding the explosion, but not during the event.
@@ -55,15 +55,27 @@ time surrounding the explosion, but not during the event.
 %For the 96 SN that overlap in time and location, 850 total ATLAS 
 We expect to see 96 of the ASASSN SNe in ATLAS observations. 
 This presents us with 850 overlap opportunities, using a 
-$\pm$10~day window. Of these, 694 observations were recorded 
+$\pm$10~day window.  Of these, 694 observations were recorded 
 and properly reduced.  %leaving 156 failed matches
 %No match, no difference (diff) image, no ddt file, or no match within 
 %an existing ddt file are the four reasons why these matches failed.
-The four reason these matches failed, as discussed in 
-\cref{sec:nomatch}--\cref{sec:noddtline}, are no match, no difference (diff) 
+Figure~\ref{fig:xy} shows these 694 observations as a function of their 
+pixel coordinates.  
+The four reasons these matches failed, as discussed in 
+\cref{sec:nomatch}--\cref{sec:noddtline}, are: no match, no difference (diff) 
 image, no ddt file, or no match within an existing ddt file.
 %These reasons are discussed in \cref{sec:nomatch}, \ref{sec:noddtline}
 %\cref{sec:}--\cref{sec:noddtline}
+
+\begin{figure}[h!]%[H]
+\begin{center}
+ %\resizebox{3in}{!}{%
+    \includegraphics[width=1\linewidth]{figures/plotxy_694_good_obs.png}%
+     \caption{\it \small{Of the 850 expected observations, 694 were reduced properly.  Each observation's x,y--position on the detector is represented by a black square.~\label{fig:xy}}}% Shown with red squares are the 67 observations that do not have a match in the ddt files. Blue circles are no diff files
+  \end{center}%
+\end{figure}
+%{\bf FIX FIGURE CAPTION}\\
+
 
 \iffalse
  \noindent {\bf Why these matches failed can be broken up into four categories -- 
@@ -96,7 +108,7 @@ matches do not fall within the $\pm$10~day window used.
 \indent Missing difference images account for 49 of the expected 850 observations. 
 Matches that were missing difference images can be attributed to an error in the 
 ATLAS pipeline. An error during differencing caused a break in the pipeline and no 
-further images to be generated for that night. Such an error will be corrected once 
+further images were generated for that night. Such an error will be corrected once 
 the data is re--reduced.
 %Properly differenced images for part of the night shows a 
 %failure in the pipeline occurred during differencing. Such a failure will be corrected once the data is re-reduced.
@@ -168,16 +180,16 @@ Here, the major contributers are high levels of sky background and optical
 issues inherent to the ATLAS system. 
 %When gone uncorrected, such issues give rise to distortion\\
 %If the proper corrections aren't made, such issues give rise to distortion\\
-If not properly corrected for, such issues cause observed objects to become distorted. 
+If not properly corrected, such issues cause observed objects to become distorted.  
 %Distortion causes sharp edges to blur, making it harder for the ATLAS pipeline to identify these objects.\\
 %Distortion causes sharp edges to become fuzzy, making it harder for the ATLAS pipeline to identify these objects.\\
 %Distortion can cause the sharp edges of an object to become fuzzy, causing the ATLAS pipeline not to trigger on such objects.\\
 %Distortion can cause sharp edges to become fuzzy, causing the ATLAS pipeline not to trigger on such objects.\\
 Distortion can cause sharp edges to become fuzzy, resulting in the ATLAS pipeline 
-failing to trigger on such objects. This accounts for 3 of the missing matches.
-Objects that were only in reduced images, but not in differenced images account 
+failing to trigger on such objects. This accounts for 3 of the missing matches.  
+Objects that were only in reduced images, but not in differenced images, account 
 for 26 of the matches missing from the ddt files. Such instances arise when the 
-object is fully subtracted during differencing, due to it existing in the wallpaper.
+object is fully subtracted during differencing, due to it existing in the wallpaper.  
 % This occurs when an onject is in the wall paper
 As the wallpaper is an ongoing project, corrected future versions will not cause this issue.\\
 %{\bf ~[WORDING]}\\
@@ -191,7 +203,7 @@ outside the nominal $\pm$10~day window.\\
 %
 \indent The final group of matches missing from the ddt files comes from an issue with 
 the array dimensionality. Each image is saved as a matrix. The software that 
-determines the correspondence between pixel coordinates and each objects RA, Dec 
+determines the correspondence between pixel coordinates and each object's RA, Dec 
 assumes the captured image fully extended to the edges of the matrix.
 %(Due to the way the detectors are aligned,)?\\
 %%%%%%%%%%In practice, the edges of some collected data are not completely filled. 
