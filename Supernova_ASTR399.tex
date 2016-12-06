@@ -78,13 +78,23 @@ University of Hawaii at Manoa,\\
 Using current data collection and reduction techniques, we plan to 
 identify supernovae (SNe) faster and fainter than the All-Sky Automated 
 Survey for Supernovae (ASASSN) team.  
-We expect to identify all SNe, with m$\geq$17.5 and declinations above $-30\deg$, 
-before ASASSN.  
+%We expect to identify all SNe, with m$\geq$17.5 and declinations (Dec) above $-30\deg$, before ASASSN.  
+We expect to identify all SNe down to magnitudes of 17.5, with declinations 
+(Dec) above $-30\deg$, before ASASSN.  
 Over the course of 4 nights, ATLAS images each spot on the sky a minimum of 5 times.  
-With a minimum of 5 observations per night of each object, it is possible to achieve m$\geq$18.5.  
+%With a minimum of 5 observations per night of each object, it is possible to achieve m$\geq$18.5.  
+With a minimum of 5 observations per night of each object, it is possible to achieve 
+magnitudes as low as 18.5.  
 In the ATLAS pipeline, images are collected, reduced, and differenced.  To generate difference 
 images, a composite image (wallpaper) is subtracted from the reduced images.   
-Stationary transients stand out in difference images, increasing their probability of detection.  \\
+Stationary transients stand out in difference images, increasing their probability of detection.  
+%To distinguish between SNe and other real objects, certain requirements must be satisfied.  
+Once images are differenced, certain restrictions are needed to distinguish between 
+SNe and other real objects.  To differentiate between SNe and asteroids, multiple 
+observations must be taken at the same position.  To eliminate variable stars, light curves 
+must be constructed and analyzed.  Unlike variable stars, the light curve of SNe will not 
+be periodic, it will contain only one node.\\
+%
 %With a focus on type Ia supernovae (SNIa), \\
 {\bf -30 or -40, JT says -40...choose one and be consistent}\\
 {\bf 17.5 (0.5mag) --OR-- 18 (1mag) fainter...which is it?}\\
@@ -221,7 +231,7 @@ With the basic observation consisting of a 30~sec exposure and about
 %The basic observation consists of 30~sec of shutter open and about
 %13~sec of overhead, so that about 900 observations are collected per night.  
 The observation strategy has varied since the telescope was
-installed, but currently observes one of four Dec bands between $-30$ %$-40$
+installed, but currently observes one of four declination (Dec) bands between $-30$ %$-40$
 and $+60$ Dec, imaging each spot 5 times on a $\sim$15~min cadence.
 The overlap between observations is about 0.4~deg, and they are
 dithered by a random amount for a given night, so each objects is seen
@@ -253,13 +263,48 @@ containing only objects that are changing in the reduced images.
 
 The ``wallpaper'' (static sky image) is the weighted sum of many 
 observations at each point in the sky.  ATLAS currently uses the
-Alard algorithm~\cite{Alard_algorithm}\\ 
-{\bf (Alard \& Lupton, 1998)} \\ 
+Alard algorithm~\cite{Alard_algorithm}
+%~\\~{\bf (Alard \& Lupton, 1998)} \\ 
 for differencing, and the
 differences are dominated by photon noise and by systematics from
 saturated stars or flare artifacts from the Schmidt corrector.
 
-{\bf\noindent include comparison figure?:\\ \indent red and diff imgs}
+%{\bf\noindent include comparison figure?:\\ \indent red and diff imgs}
+%\begin{figure*}
+ %  \centering
+ %  \begin{subfigure}{.5\textwidth}
+ %    \centering
+ %    \includegraphics[width=1\linewidth]{figures/compare/full_red_ASASSN-16ke.png}
+ %    \caption{\it \small{ }}
+ %    \label{fig:mjdhist}
+ %  \end{subfigure}%
+ %  \begin{subfigure}{.5\textwidth}
+ %    \centering
+ %      \includegraphics[width=1\linewidth]{figures/compare/full_diff_ASASSN-16ke.png}
+ %    \caption{\it \small{ }}
+ %    \label{fig:dechist}
+ %  \end{subfigure}
+ %  \caption{\it \small{Comparison image of reduced and difference, full.}}
+ %  \label{fig:asnhist}
+%\end{figure*}
+\begin{figure*}
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/compare/red_ASASSN-16ke.png}
+    \caption{\it \small{ }}
+    \label{fig:red16ke}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+      \includegraphics[width=0.5\linewidth]{figures/compare/diff_ASASSN-16ke.png}
+    \caption{\it \small{ }}
+    \label{fig:diff16ke}
+  \end{subfigure}
+  \caption{\it \small{Comparison between reduced and differenced images.  Panel `(a)' shows a reduced image containing the SN ``ASASSN-16ke.''  Panel `(b)' shows the same SN, but in a difference image.}}
+  \label{fig:compreddiff}
+\end{figure*}
+
 
 The ATLAS mission is to find moving objects, but our processing
 automatically finds all stationary transients and variable stars as
@@ -336,10 +381,19 @@ usually in their recorded locations, such objects should not show up in the wall
 %Any object that isn't in the wallpaper is left unchanged by difference imaging, causing the recorded flux to be the same both before and after image subtraction, and resulting in a starrat of 1.0.
 Any object that isn't in the wallpaper is left unchanged by difference imaging.  
 This means the recorded flux to be the same both before and after image subtraction, 
-resulting in starrat=1.0.
+resulting in starrat=1.0.  Figure~\ref{fig:starrat} shows the distribution of starrat 
+values for all objects observed on the night of 57680.  SNe are located in the 
+tight cluster around starrat=1.0.
 
-{\bf possibly include starrat figure here}\\
-{\bf in results section get into the range for starrat values}
+
+%{\bf possibly include starrat figure here}\\
+\begin{figure}[h!]%[H]
+\begin{center}
+    \includegraphics[width=1\linewidth]{figures/starrat.png}%
+     \caption{\it \small{57680 is used as an example to show the distribution of starrat as a function of magnitude.~\label{fig:starrat}}}
+  \end{center}
+\end{figure}
+{\bf in results section get into the range for starrat values}\\
 
 Difficulties include cases where a real transient can produce a high 
 starrat, and cases where a false detection from a star residual can 
@@ -441,8 +495,10 @@ Restricting classification variables drastically reduces the false alarm rate an
 to fewer objects needing visual inspection. This shows the ability 
 for ATLAS to identify all SNe faster and fainter than ASASSN is able to.
 
-\indent The detection of all SNIa between $-30$ and 
-$+60$ Dec with m$\geq$17.5 is possible using ATLAS data.  
+\indent The detection of all SNIa between $-30$ and $+60$ Dec, with 
+magnitudes down to 17.5, is possible using ATLAS data.  \\
+{\bf The detection of all SNIa between $-30$ and 
+$+60$ Dec with m$\geq$17.5 is possible using ATLAS data.  \\}
 %As shown by Figure~\ref{fig:dec_mjd}, ATLAS was able to identify all of the SNe discovered by ASASSN
 All SNe discovered by ASASSN, after ATLAS became truly operational, were 
 able to be identified with ATLAS data alone.  This is shown in 
@@ -472,7 +528,7 @@ observational limits.
 frequent coverage of the entire sky. Using current observation patterns,
 ATLAS surveys the entire sky, between $-30$ and $+60$ Dec, in just 4 nights. 
 Five observations of the entire sky are recorded by ATLAS every four nights, 
-making it possible to detect SNIa down to m$\geq$18.5.  During our analysis 
+making it possible to detect SNIa down to magnitudes of 18.5.  During our analysis 
 we ran successful tests down to m~$=18$.\\
 %{\bf \noindent BELOW IS FROM PREVIOUS ATLAS SECTION (written by me)
 %\indent possibly place it here or in procedure section}\\
@@ -489,10 +545,30 @@ are not consistently present.
 An object is determined to be real if it appears in all good 
 observations overlapping that region of the sky.  
 If an object appears in one of the images, it is expected to appear 
-in the other overlapping images collected that night.\\
+in the other overlapping images collected that night.  %\\
 % images collected that night that overlap the same region on the sky. 
-
-
+Any object that appears in only one observation, it is deemed to be 
+an artifact.  This simple criteria allows us to easily 
+distinguish between artifacts and real objects.\\
+\indent The final distinction that must be made is between the different 
+types of real objects.  All real objects have defining characteristics.  
+Asteroids and other non--stationary objects are not expected to be observed 
+in the same position more than once.  Unlike moving objects, SNe are 
+stationary transients; their position does not change as a function of time.  
+%This means they do not change position over time.  
+%
+%Changing position is the easiest indicator 
+%
+%This means, to distinguish between SNe and other real objects we require 
+%multiple observations of the object in the same position, at different 
+%points in time.  
+To remove the possibility of an object being an asteroid, we require multiple 
+observations be recorded at the same position.  In order to distinguish between 
+SNe and other stationary transients, light curves must be constructed.  The light 
+curve of a variable star will appear periodic, while that of a SNe will increase 
+suddenly, then rapidly fall off.  
+%rapidly increase then fall off.  
+{\bf ~\\~include comparison figure of LC's}
 
 
 
@@ -511,6 +587,8 @@ I would like to thank \input acknowledgement.tex  % input acknowledgement
 \begin{widetext} % make something one column...usually used for long equations...works, but resize looks better
  \section{General Notes \& Things to Address}
  \input general_notes.tex\\
+ {\bf ~\\~LOOK AT WRITTEN NOTES FROM 161128\\}
+ {\bf ASASSN-15oz tiles found but doesn't show up in match list\\~\\}
  {\bf make sure the acronym ``ATLAS'' is defined\\}
  {\bf Verify Tonry et al. (2011) journal is cited properly: PASP\\}
  {\bf Check JT's papers for proper capitalization:\\
